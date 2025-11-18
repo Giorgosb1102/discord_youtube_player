@@ -1,0 +1,8 @@
+# Virtual Environment files
+venv/
+
+# Bot security file
+.env
+
+# Windows system files
+*.pyc

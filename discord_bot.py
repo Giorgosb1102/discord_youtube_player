@@ -5,6 +5,7 @@ import asyncio
 import yt_dlp as youtube_dl 
 from dotenv import load_dotenv
 import os
+from keep_alive import keep_alive
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -125,6 +126,9 @@ async def leave(ctx):
         await ctx.send('Disconnected from the voice channel.')
     else:
         await ctx.send('I am not connected to a voice channel.')
+
+# Replit requires this to keep the bot alive
+keep_alive() 
 
 # --- Run the Bot ---
 bot.run(TOKEN)
